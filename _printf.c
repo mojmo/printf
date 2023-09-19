@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 
 	if (format[0] == '%' && format[1] == '!')
 		return (-1);
-	if (format[0] == '%' !spec_check(format[i]))
+	if (format[0] == '%' && !spec_check(format[1]))
 		return (-1);
 
 	while (form && *form)
@@ -52,7 +52,7 @@ int spec_check(char ch)
 
 	for (i = 0; i < 13; i++)
 	{
-		if (spect[i] == ch)
+		if (spec[i] == ch)
 			res = 1;
 		else
 			res = 0;

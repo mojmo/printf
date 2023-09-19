@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	if (*format == '%' && *(format + 1) == ' ' && !*(format + 2))
 		return (-1);
 
-	while (*form)
+	while (form && *form)
 	{
 		if (*form == '%')
 		{

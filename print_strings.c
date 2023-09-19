@@ -8,7 +8,11 @@
 
 int print_char(va_list args)
 {
-	return (fill_buffer(va_arg(args, int)));
+	int printed_chars = 0;
+	char ch = va_arg(args, int);
+
+	printed_chars += fill_buffer(ch);
+	return (printed_chars);
 }
 
 /**
@@ -19,7 +23,9 @@ int print_char(va_list args)
 
 int print_percentage(__attribute__((unused)) va_list args)
 {
-	return (fill_buffer('%'));
+	int printed_chars = 0;
+	printed_chars += fill_buffer('%');
+	return (printed_chars);
 }
 
 /**

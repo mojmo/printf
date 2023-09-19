@@ -6,6 +6,7 @@
 #include <stddef.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdlib.h>
 
 #define BUFFER_SIZE 1024
 #define CLEAR_BUFFER -1
@@ -35,6 +36,8 @@ int print_octal(va_list args);
 int print_hex(va_list args);
 int print_Hex(va_list args);
 int printBy_Base(unsigned int num, int base);
+int print_S(va_list args);
+char *handle_S(long int num, int base);
 
 int (*specifier(char *str))(va_list args);
 int get_func(char *str, va_list args);

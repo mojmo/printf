@@ -67,3 +67,26 @@ int print_integer(va_list args)
 	return (printed_chars);
 
 }
+
+/**
+ * handle_S - assist another function to get a value by base.
+ * @num: the number.
+ * @base: the base.
+ * Return: the value by base.
+ */
+
+char *handle_S(long int num, int base)
+{
+	unsigned long n = num;
+	static char hex[] = "0123456789ABCDEF";
+	static char local[40];
+	char *p = &local[39];
+	*p = '\0';
+
+	do {
+		*--p = hex[n % base];
+		n /= base;
+	} while (n != 0);
+
+	return (p);
+}

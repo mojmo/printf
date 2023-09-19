@@ -22,6 +22,7 @@ int (*specifier(char *str))(va_list args)
 		{"o", print_octal},
 		{"x", print_hex},
 		{"X", print_Hex},
+		{"S", print_S},
 		{NULL, NULL}
 	};
 	int i = 0;

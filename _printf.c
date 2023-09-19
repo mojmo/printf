@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 
 	if (format[0] == '%' && format[1] == '!')
 		return (-1);
-	if (format[0] == '%' && format[1] == ' ')
+	if (format[0] == '%' !spec_check(format[i]))
 		return (-1);
 
 	while (form && *form)
@@ -40,3 +40,23 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (printed_chars);
 }
+/**
+ * spec_check - check the specifier
+ * @ch: the specifier
+ * Return: 1 if ch is a specifier 0 if not
+ */
+int spec_check(char ch)
+{
+	char spec[] = "cdibuoxXSrR%";
+	int i, res;
+
+	for (i = 0; i < 13; i++)
+	{
+		if (spect[i] == ch)
+			res = 1;
+		else
+			res = 0;
+	}
+	return (res);
+}
+

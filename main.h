@@ -24,6 +24,7 @@ typedef struct select_specifier
 } spec_t;
 
 int fill_buffer(int ch);
+int spec_check(char ch);
 
 int print_string(va_list args);
 int print_char(va_list args);

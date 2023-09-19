@@ -26,7 +26,7 @@ int (*specifier(char *str))(va_list args)
 	};
 	int i = 0;
 
-	while (i < 11)
+	while (specs[i].spec)
 	{
 		if (str && *str == specs[i].spec[0])
 			return (specs[i].f);

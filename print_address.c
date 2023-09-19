@@ -8,7 +8,7 @@
 
 int print_address(va_list args)
 {
-	char *null = "(null)";
+	char *null = "(nil)";
 	void *address = va_arg(args, void *);
 	unsigned long num = (unsigned long)address;
 	int printed_chars = 0, i = 0, j;

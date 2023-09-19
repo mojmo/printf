@@ -28,7 +28,7 @@ int print_address(va_list args)
 	local[i + 1] = '0';
 	local[i + 2] = '\0';
 
-	j = i + 1;
+	j = i + 2;
 
 	while (j >= 0)
 	{

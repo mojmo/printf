@@ -17,7 +17,7 @@ int _print(char *str)
 		str++;
 	}
 
-	return (len - 1);
+	return (len);
 }
 
 /**

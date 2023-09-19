@@ -9,7 +9,8 @@
 int print_address(va_list args)
 {
 	char *null = "(null)";
-	unsigned long int num = va_arg(args, unsigned long int);
+	void *address = va_arg(args, void *);
+	unsigned long num = (unsigned long)address;
 	int printed_chars = 0, i = 0, j;
 	char local[100];
 	char hex[] = "0123456789abcdef";
@@ -35,5 +36,5 @@ int print_address(va_list args)
 		j--;
 	}
 
-	return (printed_chars);
+	return (printed_chars + 2);
 }

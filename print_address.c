@@ -15,7 +15,7 @@ int print_address(va_list args)
 	char local[100];
 	char hex[] = "0123456789abcdef";
 
-	if (!num)
+	if (address == NULL)
 		return (_print(null));
 
 	do {

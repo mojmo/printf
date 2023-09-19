@@ -78,8 +78,8 @@ int print_integer(va_list args)
 char *handle_S(long int num, int base)
 {
 	unsigned long n = num;
-	static char hex[] = "0123456789ABCDEF";
-	static char local[40];
+	static const char hex[] = "0123456789ABCDEF";
+	static const char local[40];
 	char *p = &local[39];
 	*p = '\0';
 

@@ -64,7 +64,7 @@ int print_S(va_list args)
 {
 	char *str = va_arg(args, char *), *null = "(null)", *hex_val;
 	int printed_chars = 0;
-	
+
 	if (str == NULL)
 		str = null;
 

@@ -40,6 +40,7 @@ int printBy_Base(unsigned int num, int base);
 int print_S(va_list args);
 char *handle_S(long int num, int base);
 int print_address(va_list args);
+int print_rev(va_list args);
 
 int (*specifier(char *str))(va_list args);
 int get_func(char *str, va_list args);

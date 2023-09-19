@@ -16,8 +16,11 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (!form || (*form == '%' && (*(form + 1) == '\0' || *(form + 1) == ' ')))
-		return (CLEAR_BUFFER);
+	if (!format || (*format == '%' && !*(format + 1)))
+		return (-1);
+
+	if (*format == '%' && *(format + 1) == ' ' && !*(format + 2))
+		return (-1);
 
 	while (*form)
 	{

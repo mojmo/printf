@@ -9,7 +9,7 @@
 int print_char(va_list args)
 {
 	int printed_chars = 0;
-	char ch = va_arg(args, int);
+	int ch = va_arg(args, int);
 
 	printed_chars += fill_buffer(ch);
 	return (printed_chars);

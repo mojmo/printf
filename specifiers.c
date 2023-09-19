@@ -23,6 +23,7 @@ int (*specifier(char *str))(va_list args)
 		{"x", print_hex},
 		{"X", print_Hex},
 		{"S", print_S},
+		{"p", print_address},
 		{NULL, NULL}
 	};
 	int i = 0;

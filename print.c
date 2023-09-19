@@ -1,6 +1,26 @@
 #include "main.h"
 
 /**
+ * _print - print a string.
+ * @str: the string.
+ * Return: the length of the string.
+ */
+
+int _print(char *str)
+{
+	int len = 0;
+
+	while (*str)
+	{
+		fill_buffer(*str);
+		len++;
+		str++;
+	}
+
+	return (len - 1);
+}
+
+/**
  * fill_buffer - writes the character c to stdout
  * @ch: The character to print
  *

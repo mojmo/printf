@@ -25,6 +25,7 @@ typedef struct select_specifier
 } spec_t;
 
 int fill_buffer(int ch);
+int _print(char *);
 
 int print_string(va_list args);
 int print_char(va_list args);
@@ -38,6 +39,7 @@ int print_Hex(va_list args);
 int printBy_Base(unsigned int num, int base);
 int print_S(va_list args);
 char *handle_S(long int num, int base);
+int print_address(va_list args);
 
 int (*specifier(char *str))(va_list args);
 int get_func(char *str, va_list args);

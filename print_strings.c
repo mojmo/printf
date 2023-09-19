@@ -32,9 +32,10 @@ int print_string(va_list args)
 {
 	int printed_chars = 0;
 	char *str = va_arg(args, char *);
+	char *null = "(null)";
 
-	if (!str)
-		return (-1);
+	if (str == NULL)
+		str = null;
 
 	while (*str)
 	{

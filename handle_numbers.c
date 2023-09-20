@@ -40,9 +40,9 @@ int printBy_Base(unsigned int num, int base)
 
 int print_integer(va_list args)
 {
-	int num = va_arg(args, int);
+	long int num = (long int)va_arg(args, int);
 	int printed_chars = 0, i = 0, j;
-	char local[40];
+	char local[50];
 
 	if (num < 0)
 	{

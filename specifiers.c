@@ -25,6 +25,7 @@ int (*specifier(char *str))(va_list args)
 		{"S", print_S},
 		{"p", print_address},
 		{"r", print_rev},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 	int i = 0;

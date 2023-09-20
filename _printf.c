@@ -26,7 +26,10 @@ int _printf(const char *format, ...)
 		if (*form == '%')
 		{
 			form++;
+			if (specifier(form) || specifier(++form))
 			printed_chars += get_func(form, args);
+			if (!specifier(form))
+				return (-1);
 		}
 		else
 			printed_chars += fill_buffer(*form);
